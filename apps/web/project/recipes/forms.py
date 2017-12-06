@@ -13,16 +13,13 @@ class AddRecipeForm(Form):
     recipe_title = StringField('Recipe Title', validators=[DataRequired()])
     recipe_description = StringField('Recipe Description', validators=[DataRequired()])
     recipe_public = BooleanField('Public Recipe', default="")
-    recipe_dairy_free = BooleanField('Dairy-Free Recipe', default="")
-    recipe_soy_free = BooleanField('Soy-Free Recipe', default="")
+    recipe_tested = BooleanField('Private Recipe', default="")
+    recipe_verified_free = BooleanField('Dev Recipe', default="")
     recipe_type = RadioField('Recipe Type', validators=[DataRequired()],
-                             choices=[('Breakfast', 'Breakfast Recipe'),
-                                      ('Lunch', 'Lunch Recipe'),
-                                      ('Dinner', 'Dinner Recipe'),
-                                      ('Dessert', 'Dessert Recipe'),
-                                      ('Side Dish', 'Side Dish Recipe'),
-                                      ('Drink', 'Drink Recipe')],
-                             default='Dinner')
+                             choices=[('Dev', 'Developer Recipe'),
+                                      ('QA', 'Testing Recipe'),
+                                      ('Ops', 'Operations Recipe')],
+                             default='Dev')
     recipe_rating = RadioField('Recipe Rating', validators=[DataRequired()],
                                choices=[('1', 'Rating 1'),
                                         ('2', 'Rating 2'),
@@ -45,16 +42,13 @@ class EditRecipeForm(Form):
     recipe_title = StringField('Recipe Title', validators=[])
     recipe_description = StringField('Recipe Description', validators=[])
     recipe_public = BooleanField('Public Recipe', default="")
-    recipe_dairy_free = BooleanField('Dairy-Free Recipe', default="")
-    recipe_soy_free = BooleanField('Soy-Free Recipe', default="")
+    recipe_tested = BooleanField('Tested Recipe', default="")
+    recipe_verified_free = BooleanField('Verified Recipe', default="")
     recipe_type = RadioField('Recipe Type', validators=[],
-                             choices=[('Breakfast', 'Breakfast Recipe'),
-                                      ('Lunch', 'Lunch Recipe'),
-                                      ('Dinner', 'Dinner Recipe'),
-                                      ('Dessert', 'Dessert Recipe'),
-                                      ('Side Dish', 'Side Dish Recipe'),
-                                      ('Drink', 'Drink Recipe')],
-                             default='Dinner')
+                             choices=[('Dev', 'Developer Recipe'),
+                                      ('QA', 'Testing Recipe'),
+                                      ('Ops', 'Operations Recipe')],
+                             default='Dev')
     recipe_rating = RadioField('Recipe Rating', validators=[DataRequired()],
                                choices=[('1', 'Rating 1'),
                                         ('2', 'Rating 2'),

@@ -15,9 +15,9 @@ TEST_DB = 'test.db'
 
 
 class RecipesApiTests(unittest.TestCase):
-    admin_email = 'kennedyfamilyrecipes@gmail.com'
+    admin_email = 'jjdonson@gmail.com'
     admin_password = 'FlaskIsAwesome'
-    user_email = 'patkennedy79@gmail.com'
+    user_email = 'jjdonson@gmail.com'
     user_password = 'FlaskRules'
 
     ############################
@@ -61,14 +61,12 @@ class RecipesApiTests(unittest.TestCase):
 
     def create_recipes(self):
         user1 = User.query.filter_by(email=self.admin_email).first()
-        recipe1 = Recipe('Hamburgers', 'Classic dish elevated with pretzel buns.', user1.id, True)
-        recipe2 = Recipe('Mediterranean Chicken', 'Grilled chicken served with pitas, hummus, and sauted vegetables.', user1.id, True)
-        recipe3 = Recipe('Tacos', 'Ground beef tacos with grilled peppers.', user1.id, False)
-        recipe4 = Recipe('Homemade Pizza', 'Homemade pizza made using pizza oven', user1.id, False)
+        recipe1 = Recipe('blah', 'boogie boogie', user1.id, True)
+        recipe2 = Recipe('Local Dev', 'Pre-conditions: vbox+python+nginx+postgres are running.', user1.id, True)
+        recipe3 = Recipe('Ops', 'TBD.', user1.id, False)
         db.session.add(recipe1)
         db.session.add(recipe2)
         db.session.add(recipe3)
-        db.session.add(recipe4)
         db.session.commit()
 
     def authenticate_user(self, email, password):
@@ -140,7 +138,7 @@ class RecipesApiTests(unittest.TestCase):
 
     def test_recipes_api_create_new_recipe(self):
         headers = self.get_headers_authenticated_admin()
-        json_data = {'title': 'Tacos2', 'description': 'My favorite tacos!', 'recipe_type': 'Dinner'}
+        json_data = {'title': 'Redundant Hosts', 'description': 'Nothing like sufficient hardware!', 'recipe_type': 'Ops'}
         response = self.app.post('/api/v1_2/recipes', data=json.dumps(json_data), headers=headers, follow_redirects=True)
 
         self.assertEqual(response.status_code, 201)
@@ -152,8 +150,8 @@ class RecipesApiTests(unittest.TestCase):
         json_data = json.loads(response.data.decode('utf-8'))
 
         self.assertEqual(response.status_code, 200)
-        self.assertIn('Hamburgers', json_data['title'])
-        self.assertIn('Classic dish elevated with pretzel buns.', json_data['description'])
+        self.assertIn('Local Dev', json_data['title'])
+        self.assertIn('Pre-conditions: vbox+python+nginx+postgres are running.', json_data['description'])
         self.assertIn('api/v1_2/recipes/1', json_data['self_url'])
 
     def test_recipes_api_get_individual_recipe_invalid(self):

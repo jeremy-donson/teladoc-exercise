@@ -4,17 +4,17 @@
 <div class="user-profile">
   {% if not recipe_found %}
     <div class="page-header">
-      <h2>What's for Dinner?</h2>
-      <h2>Sorry, no dinner recipes were found!</h2>
+      <h2>What's Ops?</h2>
+      <h2>Sorry, Ops Workflow Recipes were found!</h2>
     </div>
   {% elif takeout_recommendation %}
     <div class="page-header">
-      <h2>What's for Dinner?</h2>
-      <h2>Dinner Recommendation: Takeout from your favorite restaurant!</h2>
+      <h2>What's Ops?</h2>
+      <h2>Ops Recommendation: Find an intern!</h2>
     </div>
   {% else %}
     <div class="page-header">
-      <h2>What's for Dinner?... {{ recipe.recipe_title }}</h2>
+      <h2>Whats Ops?... {{ recipe.recipe_title }}</h2>
     </div>
 
     <div class="row">

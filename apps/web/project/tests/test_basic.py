@@ -69,19 +69,19 @@ class BasicTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_valid_user_registration(self):
-        response = self.register('patkennedy79@gmail.com', 'FlaskIsAwesome', 'FlaskIsAwesome')
+        response = self.register('jjdonson@gmail.com', 'FlaskIsAwesome', 'FlaskIsAwesome')
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Thanks for registering!', response.data)
 
     def test_invalid_user_registration_different_passwords(self):
-        response = self.register('patkennedy79@gmail.com', 'FlaskIsAwesome', 'FlaskIsNotAwesome')
+        response = self.register('jjdonson@gmail.com', 'FlaskIsAwesome', 'FlaskIsNotAwesome')
         self.assertIn(b'Field must be equal to password.', response.data)
 
     def test_invalid_user_registration_duplicate_email(self):
-        response = self.register('patkennedy79@gmail.com', 'FlaskIsAwesome', 'FlaskIsAwesome')
+        response = self.register('jjdonson@gmail.com', 'FlaskIsAwesome', 'FlaskIsAwesome')
         self.assertEqual(response.status_code, 200)
-        response = self.register('patkennedy79@gmail.com', 'FlaskIsReallyAwesome', 'FlaskIsReallyAwesome')
-        self.assertIn(b'ERROR! Email (patkennedy79@gmail.com) already exists.', response.data)
+        response = self.register('jjdonson@gmail.com', 'FlaskIsReallyAwesome', 'FlaskIsReallyAwesome')
+        self.assertIn(b'ERROR! Email (jjdonson@gmail.com) already exists.', response.data)
 
 
 if __name__ == "__main__":

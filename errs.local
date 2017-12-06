@@ -1,2 +1,29 @@
-Needed to update to newer postgres version to get module to query versio properly.
-Installed redis as a backup option.
+1. Python postgres module not installing.
+=> Needed to update to newer postgres version to get module to query version properly.
+=> Installed redis as a backup option.
+---
+2. Machine failed to run locally on OSX.
+$ docker-machine ls
+NAME    ACTIVE   DRIVER       STATE   URL   SWARM   DOCKER    ERRORS
+local   -        virtualbox   Error                 Unknown   machine does not exist
+Apparently driver was out of date...
+=> $ docker-machine create --driver virtualbox default
+--
+3. Better would be to cache docker images and flask modules locally.
+
+--
+4. postgres
+I would like to secure the postgres password from the dockerfile.
+
+$ psql -h localhost -p 5432 -d workflow_recipes -U teladoc --password
+flask_recipes
+\l
+\d+
+\d workflow_recipes
+
+
+nginx
+
+ecs
+
+jenkins

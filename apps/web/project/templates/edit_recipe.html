@@ -32,35 +32,35 @@
       <div class="col-sm-6">
           <div class="form-check">
             <label class="form-check-label">
-              {% if recipe.recipe_type == "Breakfast" %}
-                <input type="radio" class="form-check-input" name="recipe_type" id="recipe_type-0" value="Breakfast" checked>
+              {% if recipe.recipe_type == "Dev" %}
+                <input type="radio" class="form-check-input" name="recipe_type" id="recipe_type-0" value="Dev" checked>
               {% else %}
-                <input type="radio" class="form-check-input" name="recipe_type" id="recipe_type-0" value="Breakfast">
+                <input type="radio" class="form-check-input" name="recipe_type" id="recipe_type-0" value="Dev">
               {% endif %}
-              Breakfast
+              Dev
             </label>
           </div>
           <div class="form-check">
             <label class="form-check-label">
-              {% if recipe.recipe_type == "Lunch" %}
-                <input type="radio" class="form-check-input" name="recipe_type" id="recipe_type-1" value="Lunch" checked>
+              {% if recipe.recipe_type == "QA" %}
+                <input type="radio" class="form-check-input" name="recipe_type" id="recipe_type-1" value="QA" checked>
               {% else %}
-                <input type="radio" class="form-check-input" name="recipe_type" id="recipe_type-1" value="Lunch">
+                <input type="radio" class="form-check-input" name="recipe_type" id="recipe_type-1" value="QA">
               {% endif %}
-              Lunch
+              QA
             </label>
           </div>
           <div class="form-check">
             <label class="form-check-label">
-              {% if recipe.recipe_type == "Dinner" %}
-                <input type="radio" class="form-check-input" name="recipe_type" id="recipe_type-2" value="Dinner" checked>
+              {% if recipe.recipe_type == "Ops" %}
+                <input type="radio" class="form-check-input" name="recipe_type" id="recipe_type-2" value="Ops" checked>
               {% else %}
-                <input type="radio" class="form-check-input" name="recipe_type" id="recipe_type-2" value="Dinner">
+                <input type="radio" class="form-check-input" name="recipe_type" id="recipe_type-2" value="Ops">
               {% endif %}
-              Dinner
+              Ops
             </label>
           </div>
-          <div class="form-check">
+<!--          <div class="form-check">
             <label class="form-check-label">
               {% if recipe.recipe_type == "Dessert" %}
                 <input type="radio" class="form-check-input" name="recipe_type" id="recipe_type-3" value="Dessert" checked>
@@ -89,7 +89,7 @@
               {% endif %}
               Drink
             </label>
-          </div>
+          </div> -->
           {{ render_errors(form.recipe_type) }}
       </div>
     </fieldset>
@@ -219,35 +219,35 @@
     </div>
 
     <div class="form-group row">
-      <legend for="recipe_dairy_free" class="col-form-legend col-sm-2">Dairy-Free Recipe?</legend>
+      <legend for="recipe_tested" class="col-form-legend col-sm-2">Tested Recipe?</legend>
       <div class="col-sm-6">
         <div class="form-check">
           <label class="form-check-label">
-            {% if recipe.dairy_free_recipe == true %}
-              <input class="form-check-input" name="recipe_dairy_free" id="recipe_dairy_free" type="checkbox" checked>
+            {% if recipe.tested_recipe == true %}
+              <input class="form-check-input" name="recipe_tested" id="recipe_tested" type="checkbox" checked>
             {% else %}
-              <input class="form-check-input" name="recipe_dairy_free" id="recipe_dairy_free" type="checkbox">
+              <input class="form-check-input" name="recipe_tested" id="recipe_tested" type="checkbox">
             {% endif %}
             Yes
           </label>
-          {{ render_errors(form.recipe_dairy_free) }}
+          {{ render_errors(form.recipe_tested) }}
         </div>
       </div>
     </div>
 
     <div class="form-group row">
-      <legend for="recipe_soy_free" class="col-form-legend col-sm-2">Soy-Free Recipe?</legend>
+      <legend for="recipe_verified_free" class="col-form-legend col-sm-2">Verified Recipe?</legend>
       <div class="col-sm-6">
         <div class="form-check">
           <label class="form-check-label">
-            {% if recipe.soy_free_recipe == true %}
-              <input class="form-check-input" name="recipe_soy_free" id="recipe_soy_free" type="checkbox" checked>
+            {% if recipe.verified_free_recipe == true %}
+              <input class="form-check-input" name="recipe_verified_free" id="recipe_verified_free" type="checkbox" checked>
             {% else %}
-              <input class="form-check-input" name="recipe_soy_free" id="recipe_soy_free" type="checkbox">
+              <input class="form-check-input" name="recipe_verified_free" id="recipe_verified_free" type="checkbox">
             {% endif %}
             Yes
           </label>
-          {{ render_errors(form.recipe_soy_free) }}
+          {{ render_errors(form.recipe_verified_free) }}
         </div>
       </div>
     </div>

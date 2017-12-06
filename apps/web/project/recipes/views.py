@@ -41,7 +41,7 @@ def get_all_recipes_with_users():
 def send_new_recipe_text_message(user_email, recipe_title):
     client = TwilioRestClient(app.config['ACCOUNT_SID'], app.config['AUTH_TOKEN'])
     message = client.messages.create(
-        body="Kennedy Family Recipes... {} added a new recipe: {}".format(user_email, recipe_title),  # Message body, if any
+        body="Workflow Recipes... {} added a new recipe: {}".format(user_email, recipe_title),  # Message body, if any
         to=app.config['ADMIN_PHONE_NUMBER'],
         from_=app.config['TWILIO_PHONE_NUMBER']
     )
@@ -66,7 +66,7 @@ def public_recipes2():
 
 @recipes_blueprint.route('/recipes/<recipe_type>')
 def user_recipes(recipe_type='All'):
-    if recipe_type in ['Breakfast', 'Lunch', 'Dinner', 'Dessert', 'Side Dish', 'Drink']:
+    if recipe_type in ['Local Dev','QA','Ops']:
         if current_user.is_authenticated:
             my_recipes = Recipe.query.filter(((Recipe.user_id == current_user.id) & (Recipe.recipe_type == recipe_type)) | ((Recipe.is_public == True) & (Recipe.recipe_type == recipe_type)))
         else:
@@ -106,8 +106,8 @@ def add_recipe():
                                 form.recipe_ingredients.data,
                                 form.recipe_steps.data,
                                 form.recipe_inspiration.data,
-                                form.recipe_dairy_free.data,
-                                form.recipe_soy_free.data)
+                                form.recipe_tested.data,
+                                form.recipe_verified_free.data)
             db.session.add(new_recipe)
             db.session.commit()
             if 'ACCOUNT_SID' in app.config and not app.config['TESTING']:
@@ -185,15 +185,15 @@ def edit_recipe(recipe_id):
                 update_counter += 1
                 recipe.is_public = form.recipe_public.data
 
-            if form.recipe_dairy_free.data != recipe.dairy_free_recipe:
-                flash('DEBUG: Updating recipe.dairy_free_recipe to {}.'.format(form.recipe_dairy_free.data), 'debug')
+            if form.recipe_tested.data != recipe.tested_recipe:
+                flash('DEBUG: Updating recipe.tested_recipe to {}.'.format(form.recipe_tested.data), 'debug')
                 update_counter += 1
-                recipe.dairy_free_recipe = form.recipe_dairy_free.data
+                recipe.tested_recipe = form.recipe_tested.data
 
-            if form.recipe_soy_free.data != recipe.soy_free_recipe:
-                flash('DEBUG: Updating recipe.soy_free_recipe to {}.'.format(form.recipe_soy_free.data), 'debug')
+            if form.recipe_verified_free.data != recipe.verified_free_recipe:
+                flash('DEBUG: Updating recipe.verified_free_recipe to {}.'.format(form.recipe_verified_free.data), 'debug')
                 update_counter += 1
-                recipe.soy_free_recipe = form.recipe_soy_free.data
+                recipe.verified_free_recipe = form.recipe_verified_free.data
 
             if form.recipe_type.data != recipe.recipe_type:
                 flash('DEBUG: Updating recipe.recipe_type to {}.'.format(form.recipe_type.data), 'debug')
@@ -242,28 +242,28 @@ def edit_recipe(recipe_id):
     return render_template('edit_recipe.html', form=form, recipe=recipe)
 
 
-@recipes_blueprint.route('/whats_for_dinner')
+@recipes_blueprint.route('/brain_food')
 @login_required
-def whats_for_dinner():
+def whats_f():
     dinner_recipe_found = True
     dinner_takeout_recommendation = False
     dinner_recipe = None
-    dinner_recipes = Recipe.query.filter_by(recipe_type='Dinner').all()
+    dinner_recipes = Recipe.query.filter_by(recipe_type='Ops').all()
 
-    if len(dinner_recipes) > 0:
-        proposed_index = int((random() * 1000) % len(dinner_recipes))
+    if len(ops_recipes) > 0:
+        proposed_index = int((random() * 1000) % len(ops_recipes))
 
-        if len(dinner_recipes) < 8:
-            dinner_recipe = dinner_recipes[proposed_index]
+        if len(ops_recipes) < 8:
+            ops_recipe = ops_recipes[proposed_index]
         else:
             if proposed_index % 8 == 0:
-                dinner_takeout_recommendation = True
+                ops_takeout_recommendation = True
             else:
-                dinner_recipe = dinner_recipes[proposed_index]
+                ops_recipe = ops_recipes[proposed_index]
     else:
-        dinner_recipe_found = False
+        ops_recipe_found = False
 
-    return render_template('whats_for_dinner.html',
-                           recipe_found=dinner_recipe_found,
+    return render_template('brain_food.html',
+                           recipe_found=ops_recipe_found,
                            takeout_recommendation=dinner_takeout_recommendation,
                            recipe=dinner_recipe)

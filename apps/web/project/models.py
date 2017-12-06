@@ -39,14 +39,14 @@ class Recipe(db.Model):
     recipe_steps = db.Column(db.Text, default=None, nullable=True)
     recipe_steps_html = db.Column(db.Text, default=None, nullable=True)
     inspiration = db.Column(db.String, default=None, nullable=True)
-    dairy_free_recipe = db.Column(db.Boolean, nullable=True)
-    soy_free_recipe = db.Column(db.Boolean, nullable=True)
+    tested_recipe = db.Column(db.Boolean, nullable=True)
+    verified_free_recipe = db.Column(db.Boolean, nullable=True)
     date_created = db.Column(db.DateTime, nullable=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
     def __init__(self, title=None, description=None, user_id=None, is_public=False, image_filename=None, image_url=None,
                  recipe_type=None, rating=None, ingredients=None, recipe_steps=None, inspiration=None,
-                 dairy_free_recipe=False, soy_free_recipe=False, date_created=None):
+                 tested_recipe=False, verified_free_recipe=False, date_created=None):
         self.recipe_title = title
         self.recipe_description = description
         self.is_public = is_public
@@ -57,8 +57,8 @@ class Recipe(db.Model):
         self.ingredients = ingredients
         self.recipe_steps = recipe_steps
         self.inspiration = inspiration
-        self.dairy_free_recipe = dairy_free_recipe
-        self.soy_free_recipe = soy_free_recipe
+        self.tested_recipe = tested_recipe
+        self.verified_free_recipe = verified_free_recipe
         self.date_created = date_created
         self.user_id = user_id
 
@@ -81,8 +81,8 @@ class Recipe(db.Model):
             'ingredients': self.ingredients,
             'recipe_steps': self.recipe_steps,
             'inspiration': self.inspiration,
-            'dairy_free_recipe': self.dairy_free_recipe,
-            'soy_free_recipe': self.soy_free_recipe,
+            'tested_recipe': self.tested_recipe,
+            'verified_free_recipe': self.verified_free_recipe,
             'user_id': self.user_id
         }
 

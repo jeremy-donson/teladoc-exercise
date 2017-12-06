@@ -84,7 +84,7 @@ def send_password_reset_email(user_email):
 def send_new_user_text_message(new_user_email):
     client = TwilioRestClient(app.config['ACCOUNT_SID'], app.config['AUTH_TOKEN'])
     message = client.messages.create(
-        body="Kennedy Family Recipes... new user registered: {}".format(new_user_email),  # Message body, if any
+        body="Workflow Recipes... new user registered: {}".format(new_user_email),  # Message body, if any
         to=app.config['ADMIN_PHONE_NUMBER'],
         from_=app.config['TWILIO_PHONE_NUMBER']
     )

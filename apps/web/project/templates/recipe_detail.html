@@ -4,11 +4,11 @@
 <div class="user-profile">
   <div class="page-header">
     <h2>{{ recipe.recipe_title }}
-      {% if recipe.dairy_free_recipe %}
-        <span class="label label-info" style="font-size:12px;">Dairy-Free</span>
+      {% if recipe.tested_recipe %}
+        <span class="label label-info" style="font-size:12px;">Tested</span>
       {% endif %}
-      {% if recipe.soy_free_recipe %}
-        <span class="label label-success" style="font-size:12px;">Soy-Free</span>
+      {% if recipe.verified_free_recipe %}
+        <span class="label label-success" style="font-size:12px;">Verified</span>
       {% endif %}
     </h2>
     <h5>
