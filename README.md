@@ -1,7 +1,7 @@
-# teledoc-exercise
+# teladoc-exercise
 # jjdonson@gmail
-# github url: https://github.com/jeremy-donson/teledoc-exercise
+# github url: https://github.com/jeremy-donson/teladoc-exercise
 
 # Define ports to use:
-#	- jenkins: 8080
-#	- node: 8081
+#	- local jenkins: 8080
+#	- nginx: 80
