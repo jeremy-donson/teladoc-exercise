@@ -1,0 +1,2 @@
+Needed to update to newer postgres version to get module to query versio properly.
+Installed redis as a backup option.

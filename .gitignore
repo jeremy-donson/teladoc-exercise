@@ -1,5 +1,6 @@
 # Custom hidden dirs:
 hide/
+apps/venv/
 
 # Custom file to avoid pushing:
 .DS_Store
