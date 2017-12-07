@@ -1,0 +1,5 @@
+WORKFLOW 2:
+  - Define QA Stack
+  - Deploy QA Services
+  - Dockerize Code
+  - Test QA Docker Service

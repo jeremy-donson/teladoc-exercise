@@ -1,0 +1,12 @@
+WORKFLOW 1:
+  - Define Local Stack
+  - Deploy Local Services
+  - Initiate Local Repo
+  - Code From Reqs
+  - Test Code
+  - Commit Code
+    => Post-Commit Hook
+  - Dockerize Code
+  - Test Local Docker Service
+  - Push Code To Github
+    => Post-Push Hook
