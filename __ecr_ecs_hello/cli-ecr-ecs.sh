@@ -11,7 +11,7 @@ RUN apt-get update -y
 RUN apt-get install -y apache2
 
 # Install apache and write hello world message
-RUN echo "Hello World!" > /var/www/index.html
+RUN echo "Hello World" > /var/www/index.html
 
 # Configure apache
 RUN a2enmod rewrite
@@ -35,6 +35,28 @@ docker images --filter reference=hello-world
 docker run -p 8089:80 hello-world
 
 
-docker-machine ip machine-name
+# docker-machine ip machine-name
 
-curl http://localhost:80
+PASS=$(aws ecr get-login --no-include-email)
+echo $PASS
+docker login -u AWS -p
+unset PASS
+
+EXPECTED='Hello World'
+ACTUAL=$(curl http://localhost:8089)
+if [ $ACTUAL -eq $EXPECTED ]
+  then
+  echo "IT WORKED"
+  else
+  exit 1
+fi
+
+# Create ecr repo and tag it
+# aws ecr describe-repositories
+TAG='hello-world'
+# aws ecr delete-repository --repository-name ${TAG}
+URI=$( aws ecr create-repository --repository-name ${TAG} | grep Uri | awk -F '\"' '{print $4}' )
+echo ${URI}
+docker tag ${TAG} ${URI}
+
+docker push ${URI}
