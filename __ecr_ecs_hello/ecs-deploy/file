@@ -1,0 +1,93 @@
+ECS()                                                                    ECS()
+
+
+
+NNAAMMEE
+       ecs -
+
+DDEESSCCRRIIPPTTIIOONN
+       Amazon  EC2  Container Service (Amazon ECS) is a highly scalable, fast,
+       container management service that makes it easy to run, stop, and  man-
+       age  Docker  containers  on a cluster of EC2 instances. Amazon ECS lets
+       you launch and stop  container-enabled  applications  with  simple  API
+       calls,  allows  you to get the state of your cluster from a centralized
+       service, and gives you access to many familiar Amazon EC2 features like
+       security groups, Amazon EBS volumes, and IAM roles.
+
+       You  can  use Amazon ECS to schedule the placement of containers across
+       your cluster based on your  resource  needs,  isolation  policies,  and
+       availability  requirements. Amazon EC2 Container Service eliminates the
+       need for you to operate your own cluster management  and  configuration
+       management  systems  or worry about scaling your management infrastruc-
+       ture.
+
+AAVVAAIILLAABBLLEE CCOOMMMMAANNDDSS
+       +o create-cluster
+
+       +o create-service
+
+       +o delete-attributes
+
+       +o delete-cluster
+
+       +o delete-service
+
+       +o deregister-container-instance
+
+       +o deregister-task-definition
+
+       +o describe-clusters
+
+       +o describe-container-instances
+
+       +o describe-services
+
+       +o describe-task-definition
+
+       +o describe-tasks
+
+       +o discover-poll-endpoint
+
+       +o help
+
+       +o list-attributes
+
+       +o list-clusters
+
+       +o list-container-instances
+
+       +o list-services
+
+       +o list-task-definition-families
+
+       +o list-task-definitions
+
+       +o list-tasks
+
+       +o put-attributes
+
+       +o register-container-instance
+
+       +o register-task-definition
+
+       +o run-task
+
+       +o start-task
+
+       +o stop-task
+
+       +o submit-container-state-change
+
+       +o submit-task-state-change
+
+       +o update-container-agent
+
+       +o update-container-instances-state
+
+       +o update-service
+
+       +o wait
+
+
+
+                                                                         ECS()
