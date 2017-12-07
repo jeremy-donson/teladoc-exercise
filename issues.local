@@ -1,3 +1,4 @@
+
 1. Python postgres module not installing.
 => Needed to update to newer postgres version to get module to query version properly.
 => Installed redis as a backup option.
@@ -11,19 +12,29 @@ Apparently driver was out of date...
 --
 3. Better would be to cache docker images and flask modules locally.
 
+- time each command and track that
 --
 4. postgres
 I would like to secure the postgres password from the dockerfile.
 
 $ psql -h localhost -p 5432 -d workflow_recipes -U teladoc --password
-flask_recipes
+# flask_recipes
+SELECT version();
 \l
 \d+
 \d workflow_recipes
 
-
+??  Need to change two col names
+--
 nginx
 
+--
+
+
+--
 ecs
 
+--
+
 jenkins
+

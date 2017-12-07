@@ -17,28 +17,27 @@ $ psql -p 5432 -U postgres --password
 Run app.
 Curl url.
 --
-1. Create the Dockerfile for postgres service
+# 1. Create the Dockerfile for postgres service
 
 cd apps/web/
 python3 create_postgres_dockerfile.py
 cd ..
 
-2. Build and run the Docker containers
+# 2. Build and run the Docker containers
 
-docker-machine create -d virtualbox dev;
+time docker-machine create -d virtualbox dev;
 eval "$(docker-machine env dev)"
 
-docker-compose build
-docker-compose up -d
-docker-compose run web env
-docker-compose logs
+time docker-compose build
+time docker-compose up -d
+time docker-compose run web env
+time docker-compose logs
 
 # Stop and remove all containers.
 docker stop $(docker ps -aq)
 docker rm $(docker ps -aq)
 
-3. Create or re-initialize the database
-
+# 3. Create or re-initialize the database
 docker-compose run --rm web python ./instance/db_create.py
 
 Go to your favorite web browser and open:
