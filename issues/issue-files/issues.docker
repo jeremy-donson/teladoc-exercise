@@ -1,5 +1,0 @@
-$ unset ${!DOCKER*} # Clear docker glitches.
-
-docker tag hello-world 589424541475.dkr.ecr.us-east-1.amazonaws.com/hello-world
-
-docker-machine create --driver amazonec2 --amazonec2-access-key AKI******* --amazonec2-secret-key 8T93C*******  aws-sandbox
