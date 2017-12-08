@@ -24,6 +24,12 @@ time docker-compose logs
 # 3. Create or re-initialize the database
 docker-compose run --rm web python ./instance/db_create.py
 
+# $ psql -p 5432 -U postgres --password
+# POSTGRES_USER = 'teladoc'
+# POSTGRES_PASSWORD = 'flask_recipes'
+# Set environment variables
+# ENV POSTGRES_DB workflow_recipes
+
 Go to your favorite web browser and open:
 
     http://192.168.99.100:5000  $ Check the IP address using 'docker-machine ip'
