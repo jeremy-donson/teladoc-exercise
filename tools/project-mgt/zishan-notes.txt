@@ -1,0 +1,125 @@
+
+concerns:
+
+- collaborative
+
+- interactive
+
+- properly structured
+
+- expectations are set early
+
+
+
+——
+
+I am glad to stay focused on the assignment as written.
+
+In terms of this assignment, I see four major components:
+
+1 - Project code, configs, repositories and environments.
+
+2 - Local docker image generation and testing.
+
+3 - Remote docker image generation and testing.
+
+4 - Jenkins configurations and pipelines.
+
+
+
+With apologies, I missed the opportunity earlier to say these things when you mentioned the assignment in the interview.
+
+That did not feel like the appropriate time to raise these concerns.
+
+
+
+I also missed the chance to check in and ensure that I was on the right track within 12-24 hours.
+
+That would have precluded lots of assumptions from either of us.
+
+
+
+Then we could have:
+
+- Reflected on approach choices.
+
+- Set scope and sequence of tasks.
+
+- Defined potential blockers, as well as deciding together whether they are to be worked through or around.
+
+- Decide together whether we do this the right way, or instead do it the “right now” way.  We can always schedule the right way for later.
+
+- Reset expectations.
+
+- Joked around.
+
+- Considered the larger decisions that surround this opportunity with Teladoc.
+
+- Iteratively reflected on how you can help me in most lightweight way.
+
+
+
+I apologize for the lateness of this note.  I am meanwhile not blocked for the moment.
+
+I hope that you find this response clarifying,
+
+and I ask that you speak candidly about whether this addresses your concerns.
+
+I have no other concerns.
+
+
+
+Each assignment component raises some questions below:
+
+
+
+1 - Project code, configs, repositories and environments.
+
+	- What language: python3
+
+	- What code?
+
+	- How many tiers: Start with 2
+
+	- What tests are proof of completion? [ systems, code, data, operations ]
+
+	- How many environments?
+
+	- Which services to use?
+
+	- How secure we ought to be in each environment?
+
+	- Whether tests of scale are to be considered?
+
+
+
+2 - Local docker image generation and testing.
+
+	- Docker file metadata for local.
+
+	- Creating github post-push hooks.
+
+	- Writing local Jenkins pipeline.
+
+
+
+3 - Remote docker image generation and testing.
+
+	- Docker file metadata for qa.
+
+	- Creating github post-push hooks.
+
+	- Writing qa Jenkins pipeline.
+
+
+
+4. - Jenkins configurations and pipelines.
+
+
+
+
+
+# Cultivating mutual loyalty in our working relationship.
+
+Opportunity: Organizing the Rudiments of This Project Together
+

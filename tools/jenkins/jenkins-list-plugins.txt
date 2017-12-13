@@ -1,0 +1,111 @@
+Jenkins.instance.pluginManager.plugins.each{
+  plugin -> 
+    println ("${plugin.getDisplayName()} (${plugin.getShortName()}): ${plugin.getVersion()}")
+}
+
+JSch dependency plugin (jsch): 0.1.54.1
+Common API for Blue Ocean (blueocean-commons): 1.3.4
+Structs Plugin (structs): 1.10
+GitHub Pull Request Coverage Status (github-pr-coverage-status): 1.9.1
+Apache HttpComponents Client 4.x API Plugin (apache-httpcomponents-client-4-api): 4.5.3-2.0
+Pipeline: Declarative Extension Points API (pipeline-model-extensions): 1.2.5
+GitHub Integration Plugin (github-pullrequest): 0.1.0-rc27
+Amazon EC2 Container Service plugin (amazon-ecs): 1.11
+Kubernetes plugin (kubernetes): 1.1.2
+Pipeline (workflow-aggregator): 2.5
+Mailer Plugin (mailer): 1.20
+Git plugin (git): 3.6.4
+Pipeline Utility Steps (pipeline-utility-steps): 1.5.1
+Command Agent Launcher Plugin (command-launcher): 1.1
+Python Plugin (python): 1.3
+Pipeline: API (workflow-api): 2.24
+CloudBees Docker Build and Publish plugin (docker-build-publish): 1.3.2
+Pipeline: Job (workflow-job): 2.16
+SSH Credentials Plugin (ssh-credentials): 1.13
+Authentication Tokens API Plugin (authentication-tokens): 1.3
+GitHub Branch Source Plugin (github-branch-source): 2.3.1
+Pipeline: Shared Groovy Libraries (workflow-cps-global-lib): 2.9
+Jackson 2 API Plugin (jackson2-api): 2.8.7.0
+SSH Slaves plugin (ssh-slaves): 1.22
+GitHub Issues Plugin (github-issues): 1.2.4
+Docker Pipeline (docker-workflow): 1.14
+Pipeline: Stage Tags Metadata (pipeline-stage-tags-metadata): 1.2.5
+Pipeline: GitHub (pipeline-github): 1.0
+Pipeline: Milestone Step (pipeline-milestone-step): 1.3.1
+Credentials Plugin (credentials): 2.1.16
+Docker API Plugin (docker-java-api): 3.0.14
+Amazon EC2 plugin (ec2): 1.38
+GitHub plugin (github): 1.28.1
+JavaScript GUI Lib: jQuery bundles (jQuery and jQuery UI) plugin (jquery-detached): 1.2.1
+CloudBees Docker Hub/Registry Notification (dockerhub-notification): 2.2.0
+Pipeline: SCM Step (workflow-scm-step): 2.6
+Matrix Authorization Strategy Plugin (matrix-auth): 2.2
+Matrix Project Plugin (matrix-project): 1.12
+Pipeline: Stage Step (pipeline-stage-step): 2.3
+Pipeline: Build Step (pipeline-build-step): 2.6
+OWASP Markup Formatter Plugin (antisamy-markup-formatter): 1.5
+OpenShift Sync (openshift-sync): 0.9.1
+Pipeline: Input Step (pipeline-input-step): 2.8
+Pipeline: AWS Steps (pipeline-aws): 1.18
+bouncycastle API Plugin (bouncycastle-api): 2.16.2
+JavaScript GUI Lib: Handlebars bundle plugin (handlebars): 1.1.1
+Variant Plugin (variant): 1.1
+Async Http Client (async-http-client): 1.9.40.0
+JavaScript GUI Lib: Moment.js bundle plugin (momentjs): 1.1.1
+Plain Credentials Plugin (plain-credentials): 1.4
+Docker Commons Plugin (docker-commons): 1.9
+Amazon Web Services SDK (aws-java-sdk): 1.11.226
+Docker plugin (docker-plugin): 1.1
+Git client plugin (git-client): 2.6.0
+Pipeline: REST API Plugin (pipeline-rest-api): 2.9
+packer (packer): 1.4
+Pipeline: Basic Steps (workflow-basic-steps): 2.6
+GitHub API Plugin (github-api): 1.90
+CloudBees Amazon Web Services Credentials Plugin (aws-credentials): 1.23
+OpenShift Deployer Plugin (openshift-deployer): 1.2.0
+Credentials Binding Plugin (credentials-binding): 1.13
+Pipeline: Declarative (pipeline-model-definition): 1.2.5
+Pipeline: Stage View Plugin (pipeline-stage-view): 2.9
+Amazon EC2 Container Service plugin with autoscaling capabilities (scalable-amazon-ecs): 1.0
+Token Macro Plugin (token-macro): 2.3
+Ansible plugin (ansible): 0.6.2
+SSH plugin (ssh): 2.5
+Pipeline: Multibranch (workflow-multibranch): 2.16
+Script Security Plugin (script-security): 1.36
+GIT server Plugin (git-server): 1.7
+docker-build-step (docker-build-step): 1.43
+Pipeline: Declarative Agent API (pipeline-model-declarative-agent): 1.1.1
+Pipeline GitHub Notify Step Plugin (pipeline-githubnotify-step): 1.0.3
+Node Iterator API Plugin (node-iterator-api): 1.5.0
+Pipeline: Step API (workflow-step-api): 2.14
+Pipeline Graph Analysis Plugin (pipeline-graph-analysis): 1.5
+Pipeline: Model API (pipeline-model-api): 1.2.5
+Windows Slaves Plugin (windows-slaves): 1.3.1
+Pipeline: Groovy (workflow-cps): 2.42
+Pipeline: Nodes and Processes (workflow-durable-task-step): 2.17
+Branch API Plugin (branch-api): 2.0.16
+Folders Plugin (cloudbees-folder): 6.2.1
+Tracking Git Plugin (tracking-git): 1.0
+Job DSL (job-dsl): 1.66
+Durable Task Plugin (durable-task): 1.17
+Aqua Security Scanner (aqua-security-scanner): 2.0
+GitHub Authentication plugin (github-oauth): 0.28.1
+Publish Over SSH (publish-over-ssh): 1.17
+JUnit Plugin (junit): 1.23
+OpenShift Pipeline Jenkins Plugin (openshift-pipeline): 1.0.53
+SCM API Plugin (scm-api): 2.2.5
+JavaScript GUI Lib: ACE Editor bundle plugin (ace-editor): 1.1
+Display URL API (display-url-api): 2.2.0
+Pipeline: Supporting APIs (workflow-support): 2.16
+REST API for Blue Ocean (blueocean-rest): 1.3.4
+Terraform Plugin (terraform): 1.0.9
+Slack Notification Plugin (slack): 2.3
+Global Slack Notifier Plugin (global-slack-notifier): 1.3
+Javadoc Plugin (javadoc): 1.4
+Maven Integration plugin (maven-plugin): 3.0
+Copy Artifact Plugin (copyartifact): 1.39
+S3 publisher plugin (s3): 0.10.12
+Amazon ECR plugin (amazon-ecr): 1.6
+HashiCorp Vault Plugin (hashicorp-vault-plugin): 2.1.0
+Hubot Pipeline Steps (hubot-steps): 1.1.0
+Result: [Plugin:jsch, Plugin:blueocean-commons, Plugin:structs, Plugin:github-pr-coverage-status, Plugin:apache-httpcomponents-client-4-api, Plugin:pipeline-model-extensions, Plugin:github-pullrequest, Plugin:amazon-ecs, Plugin:kubernetes, Plugin:workflow-aggregator, Plugin:mailer, Plugin:git, Plugin:pipeline-utility-steps, Plugin:command-launcher, Plugin:python, Plugin:workflow-api, Plugin:docker-build-publish, Plugin:workflow-job, Plugin:ssh-credentials, Plugin:authentication-tokens, Plugin:github-branch-source, Plugin:workflow-cps-global-lib, Plugin:jackson2-api, Plugin:ssh-slaves, Plugin:github-issues, Plugin:docker-workflow, Plugin:pipeline-stage-tags-metadata, Plugin:pipeline-github, Plugin:pipeline-milestone-step, Plugin:credentials, Plugin:docker-java-api, Plugin:ec2, Plugin:github, Plugin:jquery-detached, Plugin:dockerhub-notification, Plugin:workflow-scm-step, Plugin:matrix-auth, Plugin:matrix-project, Plugin:pipeline-stage-step, Plugin:pipeline-build-step, Plugin:antisamy-markup-formatter, Plugin:openshift-sync, Plugin:pipeline-input-step, Plugin:pipeline-aws, Plugin:bouncycastle-api, Plugin:handlebars, Plugin:variant, Plugin:async-http-client, Plugin:momentjs, Plugin:plain-credentials, Plugin:docker-commons, Plugin:aws-java-sdk, Plugin:docker-plugin, Plugin:git-client, Plugin:pipeline-rest-api, Plugin:packer, Plugin:workflow-basic-steps, Plugin:github-api, Plugin:aws-credentials, Plugin:openshift-deployer, Plugin:credentials-binding, Plugin:pipeline-model-definition, Plugin:pipeline-stage-view, Plugin:scalable-amazon-ecs, Plugin:token-macro, Plugin:ansible, Plugin:ssh, Plugin:workflow-multibranch, Plugin:script-security, Plugin:git-server, Plugin:docker-build-step, Plugin:pipeline-model-declarative-agent, Plugin:pipeline-githubnotify-step, Plugin:node-iterator-api, Plugin:workflow-step-api, Plugin:pipeline-graph-analysis, Plugin:pipeline-model-api, Plugin:windows-slaves, Plugin:workflow-cps, Plugin:workflow-durable-task-step, Plugin:branch-api, Plugin:cloudbees-folder, Plugin:tracking-git, Plugin:job-dsl, Plugin:durable-task, Plugin:aqua-security-scanner, Plugin:github-oauth, Plugin:publish-over-ssh, Plugin:junit, Plugin:openshift-pipeline, Plugin:scm-api, Plugin:ace-editor, Plugin:display-url-api, Plugin:workflow-support, Plugin:blueocean-rest, Plugin:terraform, Plugin:slack, Plugin:global-slack-notifier, Plugin:javadoc, Plugin:maven-plugin, Plugin:copyartifact, Plugin:s3, Plugin:amazon-ecr, Plugin:hashicorp-vault-plugin, Plugin:hubot-steps]

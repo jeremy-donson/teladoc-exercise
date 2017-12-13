@@ -1,5 +1,0 @@
-ecs-cli/out/
-bin/
-*.swp
-*.orig
-ecs-cli/vendor/pkg
