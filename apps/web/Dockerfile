@@ -1,4 +1,4 @@
-FROM python:3.6.1
+FROM python:3.10.9
 MAINTAINER Jeremy Donson <jjdonson@gmail.com>
 
 # Create the group and user to be used in this container
