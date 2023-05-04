@@ -7,7 +7,7 @@ click==6.6
 cov-core==1.15.0
 coverage==4.2
 duvet==0.1.2
-Flask==0.11.1
+Flask==2.2.5
 Flask-Bcrypt==0.7.1
 Flask-HTTPAuth==3.2.1
 Flask-Login==0.3.2
